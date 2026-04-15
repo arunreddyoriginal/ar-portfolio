@@ -2,7 +2,7 @@
 
 // src/components/sections/Hero.tsx
 import { motion } from 'framer-motion';
-import { ArrowDown, CircleCheckBig } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 
 const terminalLines = [
   { text: '→ Scanning prospect website...', status: '✓ done', delay: 0.8 },
@@ -192,37 +192,22 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating badge */}
+            {/* Scroll indicator */}
             <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 }}
-              className="mt-4 flex items-center gap-2 bg-[var(--bg-card)] border border-[var(--border)] rounded-xl px-4 py-3 w-fit shadow-[var(--shadow)]"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 1.5 }}
+              className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--text-muted)]"
             >
-              <CircleCheckBig size={16} className="text-green-500" />
-              <span className="text-sm text-[var(--text-secondary)]">
-                Hackathon finalist — Google Cloud Gen AI Academy APAC 2026
-              </span>
+              <span className="text-xs uppercase tracking-widest">Scroll</span>
+              <motion.div
+                animate={{ y: [0, 6, 0] }}
+                transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
+              >
+                <ArrowDown size={14} />
+              </motion.div>
             </motion.div>
-          </motion.div>
         </div>
-
-        {/* Scroll indicator */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-[var(--text-muted)]"
-        >
-          <span className="text-xs uppercase tracking-widest">Scroll</span>
-          <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ repeat: Infinity, duration: 1.8, ease: 'easeInOut' }}
-          >
-            <ArrowDown size={14} />
-          </motion.div>
-        </motion.div>
-      </div>
     </section>
   );
 }
