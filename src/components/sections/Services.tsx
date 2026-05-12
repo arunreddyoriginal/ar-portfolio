@@ -2,6 +2,7 @@
 // src/components/sections/Services.tsx
 import { motion } from 'framer-motion';
 import { Zap, Brain, ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
 
 const services = [
   {
@@ -11,7 +12,7 @@ const services = [
     subtitle: 'Fast, reliable automation without custom AI reasoning',
     bestFor: 'SMBs, internal ops teams, marketing/sales workflows',
     delivery: '3–7 days',
-    price: 'From $500',
+    price: 'From $1,000',
     description:
       'For businesses that need reliable, structured automation. Trigger-based pipelines that connect your tools, remove manual steps, and run 24/7 without human involvement.',
     examples: [
@@ -127,6 +128,15 @@ export default function Services() {
                   </li>
                 ))}
               </ul>
+
+              {!s.accent && (
+                <Link
+                  href="/speed-to-lead"
+                  className="flex items-center gap-1.5 text-sm font-medium text-[var(--accent)] hover:opacity-80 transition-opacity mb-4"
+                >
+                  → Featured: Speed-to-Lead SMS System for Home Services →
+                </Link>
+              )}
 
               <button
                 onClick={scrollToContact}

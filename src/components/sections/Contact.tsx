@@ -201,7 +201,6 @@ export default function Contact() {
                       className="w-full px-4 py-3 rounded-xl border border-[var(--border)] bg-[var(--bg-primary)] text-[var(--text-primary)] text-sm focus:outline-none focus:border-[var(--accent)] transition-colors"
                     >
                       <option value="">Select range</option>
-                      <option>Under $500</option>
                       <option>$500 – $2,000</option>
                       <option>$2,000 – $10,000</option>
                       <option>$10,000+</option>

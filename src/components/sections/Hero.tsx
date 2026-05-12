@@ -175,9 +175,9 @@ export default function Hero() {
               {/* Stats footer */}
               <div className="grid grid-cols-3 border-t border-[var(--border)]">
                 {[
-                  { value: '14s', label: 'send time' },
-                  { value: '9', label: 'projects shipped' },
-                  { value: '24/7', label: 'automation uptime' },
+                  { value: '< 10s', label: 'avg SMS response time' },
+                  { value: '7 days', label: 'signed to live system' },
+                  { value: '100%', label: 'uptime, weekends included' },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -207,7 +207,9 @@ export default function Hero() {
                 <ArrowDown size={14} />
               </motion.div>
             </motion.div>
+          </motion.div>
         </div>
+      </div>
     </section>
   );
 }

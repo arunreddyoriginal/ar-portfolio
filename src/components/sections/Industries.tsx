@@ -14,6 +14,16 @@ const industries = [
     ],
   },
   {
+    icon: '🛠',
+    name: 'Home Services',
+    uses: [
+      'Speed-to-Lead SMS automation (60-sec lead response)',
+      'Review request automation after every job',
+      'Quote follow-up sequences',
+      'Estimate generation from lead intake',
+    ],
+  },
+  {
     icon: '🛒',
     name: 'E-commerce & Retail',
     uses: [
@@ -44,23 +54,13 @@ const industries = [
     ],
   },
   {
-    icon: '🏥',
-    name: 'Healthcare & Clinics',
+    icon: '👥',
+    name: 'Recruitment & Staffing',
     uses: [
-      'Appointment reminder systems',
-      'Staff scheduling automation',
-      'Patient intake processing',
-      'Compliance document workflows',
-    ],
-  },
-  {
-    icon: '💼',
-    name: 'Finance & Operations',
-    uses: [
-      'Invoice processing automation',
-      'Approval workflow systems',
-      'Spend anomaly detection',
-      'Vendor communication pipelines',
+      'AI resume screening & ranking',
+      'Candidate database re-engagement',
+      'Job description generation',
+      'Interview scheduling automation',
     ],
   },
 ];
